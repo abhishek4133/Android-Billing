@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            style="@style/ToolBar"
+            android:gravity="start">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close"
+                style="@style/MenuDropDown"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:srcCompat="@drawable/ic_chevron_left" />
+
+            <TextView
+                android:id="@+id/latoBoldTextview3"
+                style="@style/header_action_bar"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/close"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Billing" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/loadView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <ProgressBar
+            android:id="@+id/webviewLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</LinearLayout>

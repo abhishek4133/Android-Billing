@@ -1,0 +1,4 @@
+
+rootProject.name = "Android-Billing"
+include ':app'
+include ':billing'

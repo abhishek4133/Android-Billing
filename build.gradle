@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        compose_version = '1.0.5'
+        kotlin_version = "1.5.31"
+        nav_version = "2.3.5"
+        commons_version = "0.0.1"
+    }
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.5.31"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {
+            url = "https://maven.pkg.github.com/Adaptavant/*"
+            credentials {
+                username = "vigneshsurendran"
+                password = "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"
+            }
+        }
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
